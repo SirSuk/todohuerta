@@ -1,0 +1,15 @@
+@mixin centrar{
+  display:flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin borde{
+  border: 2px solid #200;
+}
+
+@mixin column {
+  display:flex;
+  flex-direction:column;
+  gap: .5rem;
+}

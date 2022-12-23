@@ -1,5 +1,6 @@
 @use 'reset';
 @use 'variables' as *;
+@use 'mixins' as mixin ;
 @import '../../../node_modules/bootstrap-icons/font/bootstrap-icons.css';
 
 body {
@@ -12,32 +13,40 @@ body {
  width: 80%;
  max-width: 800px;
  margin: 2rem auto;
- display: flex;
- justify-content: center;
- align-items: center;
+ @include mixin.centrar;
  flex-direction: column;
  gap: 1rem;
 }
 .logo{
 width: 120px;
 }
+h1{
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  font-weight: 600;
+}
 .main-form{
 text-align: center;
+& div.select-container {
+  @include mixin.borde;
+  border-radius: $radius;
+ padding: 3rem;
+ margin-top: 2rem;
+ @include mixin.column;
+}
 }
 .inputs{
 display: flex;
 flex-direction: column;
 gap: .3rem;
+@include mixin.borde;
+border-radius: $radius;
+ & input:focus{
+  color: green;
 
+ }
 
-& .label {
-  font-size: 1.2rem;
-}
-&input {
-  font-size: 1.2rem;
-  background-color: red;
-  box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px, rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px, rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;
-}
+  
 }
 
 .btn {
@@ -48,14 +57,15 @@ gap: .3rem;
   background-color: $complementary;
   color: white;
   cursor: pointer;
-  &:hover{
-    transform: scale(1.1);
+    &:hover{
+      transform: scale(1.1);
   }
 }
 .container-siembras {
-  width: 50%;
+  border-radius: $radius;
+  width: 80%;
   padding: 2rem;
-  border:1px solid black;
+  @include mixin.borde;
   background-color: $secondary;
 
   &h2{
