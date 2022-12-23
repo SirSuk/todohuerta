@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./src/styles/css/style.css">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,400;0,600;0,700;0,900;1,500&display=swap" rel="stylesheet">
+
+  <title>Lista de tareas del hortelano</title>
+</head>
+<body>
+  <div class="container">
+    <img class="logo"src="he.svg" alt="">
+    <h1>Lista de tareas del hortelano</h1>
+
+    <form class="main-form">
+      <div class="inputs">
+        <label class="label" for="fecha">Que vas a sembrar?</label>
+        <input class="input" type="text"  name="hortaliza">
+
+        <label class="label" for="fecha">Fecha de siembra:</label>
+        <input class="input" id="fecha" type="date" name="fecha">
+      </div>
+
+      <div>
+        
+      </div>
+  
+      <button class="btn">Añadir</button>
+    </form>
+
+
+    <section class="container-siembras">
+      <h2>Siembra</h2>
+
+      <article class="siembra">
+        <span class="texto">Semillero tomates</span> - <span class="fecha"></span><i class="icon eye-icon bi bi-eye"></i><i class="icon delete-icon bi bi-trash"></i>
+      </article>
+
+
+
+
+  </div>
+  
+  
+  <script src="./src/main.js" type="module"></script>
+</body>
+</html>

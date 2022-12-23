@@ -1,0 +1,182 @@
+@use 'reset';
+@use 'variables' as *;
+@import '../../../node_modules/bootstrap-icons/font/bootstrap-icons.css';
+
+body {
+  background-color:$primary;
+  height: 100vh;
+  font-family: 'Poppins', sans-serif;
+}
+
+.container{
+ width: 80%;
+ max-width: 800px;
+ margin: 2rem auto;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ flex-direction: column;
+ gap: 1rem;
+}
+.logo{
+width: 120px;
+}
+.main-form{
+text-align: center;
+}
+.inputs{
+display: flex;
+flex-direction: column;
+gap: .3rem;
+
+
+& .label {
+  font-size: 1.2rem;
+}
+&input {
+  font-size: 1.2rem;
+  background-color: red;
+  box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px, rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px, rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;
+}
+}
+
+.btn {
+  margin-top:2rem;
+  padding:.4rem 2rem;
+  border-radius: 14px;
+  border: none;
+  background-color: $complementary;
+  color: white;
+  cursor: pointer;
+  &:hover{
+    transform: scale(1.1);
+  }
+}
+.container-siembras {
+  width: 50%;
+  padding: 2rem;
+  border:1px solid black;
+  background-color: $secondary;
+
+  &h2{
+    text-align:center;
+  }
+}
+
+
+// .container {
+//   width: 80%;
+//   max-width: 1000px;
+//   margin: 2rem auto;
+// }
+
+// h1 {
+//   text-align: center;
+//   margin-bottom: 2rem;
+// }
+
+// form {
+//   display: grid;
+//   justify-items: center;
+//   gap: 1rem;
+  
+  
+  
+//   .inputs {
+//     display: flex;
+//     gap: 1rem;    
+    
+//     input[type="text"] {
+//       padding: 0.2rem 1rem;
+//       outline: none;
+//       border: none;
+//       border-radius: $radius;
+      
+//       box-shadow: $shadow;
+  
+      
+//       &:focus {
+//         outline: 2px solid $accent;
+//         outline-offset: 2px;
+//       }
+
+      
+//     }
+    
+//     .is-invalid {
+//       outline: 2px solid crimson !important;
+//       outline-offset: 2px;
+//     }
+//   }
+
+//   div.checkbox {
+//     input[type="checkbox"] {
+//       width: 1rem;
+//       height: 1rem;
+//       margin: 0;
+//       position: relative;
+//       top: 2px;
+//       accent-color: $accent;
+//     }
+//   }
+
+//   button {
+//     background-color: $accent;
+//     border: none;
+//     padding: 0.3rem 0.7rem;
+//     border-radius: $radius;
+//     box-shadow: $shadow;
+//   } 
+  
+
+// }
+
+
+
+// section.book-list {
+//   margin-top: 3rem;
+//   padding: 1.5rem;
+//   border: 3px solid $accent;
+//   border-radius: $radius;
+//   box-shadow: $shadow;
+
+//   h2 {
+//     text-align: center;
+//     margin-bottom: 1rem;
+//   }
+
+//   article.book {
+//     display: flex;
+//     align-items: center;
+//     gap: 0.5rem;
+//     font-size: 1.3rem;
+
+//     .book__author {
+//       font-style: italic;
+//       font-size: 1.1rem;
+//     }
+
+//     .eye-icon {
+//       color: #f2ff03;
+//       margin-right: auto;
+//       margin-left: 1rem;
+//     }
+
+//     .delete-icon {
+//       cursor: pointer;
+//       transition: transform 0.3s ease;
+//       color: hsl(348, 83%, 60%);
+
+//       &:hover {
+//         transform: scale(1.1);
+//       }
+//     }
+
+
+
+
+
+//   }
+
+
+// }

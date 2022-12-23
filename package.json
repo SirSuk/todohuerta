@@ -1,0 +1,19 @@
+{
+  "name": "35-app-library",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --watch src/styles/sass:src/styles/css",
+    "sass:compressed": "sass --watch src/styles/sass:src/styles/css --style=compressed"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "sass": "^1.57.1"
+  },
+  "dependencies": {
+    "bootstrap-icons": "^1.10.2"
+  }
+}
