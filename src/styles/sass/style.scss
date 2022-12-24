@@ -50,8 +50,8 @@ body {
     letter-spacing: .2rem;;
   }
   & .logo {
-    width: 80px;
-    margin-left:1rem;
+    width: 180px;
+    height: 140px;
   }
   & .header-btn{
     padding:.2rem .8rem ;
@@ -89,13 +89,16 @@ body {
       flex-direction: column;
       gap: .1rem;
       border-radius: $radius;
-      & input:focus{
+      &   input:focus{
         color: primary;
       }
       .input{
         border-radius: $radius;
         box-shadow: $shadow;
         width:90%;
+        }
+        & .label{
+          font-weight: bold;
         }
     }
     & div.select-container {
@@ -110,6 +113,8 @@ body {
       }
     }
   }
+  
+
   
   .btn{
     margin-top:2rem;
@@ -130,7 +135,11 @@ body {
   width: 80%;
   padding: 2rem;
   background-color: $secondary;
-
+  &.siembra{
+    display: flex;
+    gap:2rem;
+    justify-content: space-between;
+  }
   &h2{
     text-align:center;
   }

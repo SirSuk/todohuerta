@@ -104,8 +104,8 @@ body {
   letter-spacing: 0.2rem;
 }
 .header .logo {
-  width: 80px;
-  margin-left: 1rem;
+  width: 180px;
+  height: 140px;
 }
 .header .header-btn {
   padding: 0.2rem 0.8rem;
@@ -154,6 +154,9 @@ body {
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
   width: 90%;
 }
+.form-principal .inputs .label {
+  font-weight: bold;
+}
 .form-principal div.select-container {
   display: flex;
   flex-direction: column;
@@ -187,6 +190,11 @@ body {
   width: 80%;
   padding: 2rem;
   background-color: rgba(118, 184, 82, 0.4980392157);
+}
+.caja-tareas.siembra {
+  display: flex;
+  gap: 2rem;
+  justify-content: space-between;
 }
 .caja-tareash2 {
   text-align: center;
