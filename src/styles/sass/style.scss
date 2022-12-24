@@ -26,7 +26,7 @@ font-family: 'Poppins', sans-serif;
 // }
 
 body {
-  background:url(../../../house-163526.webp) center/cover;
+  background:url(../../../bg.webp) center/cover;
   height: 100vh;
   font-family: 'Poppins', sans-serif;
 }
@@ -36,11 +36,11 @@ body {
 }
 .header{
   display:flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
   background-color: $secondary;
   box-shadow: $shadow;
-  
+  padding:.9rem;
   width: 100%;
 
   & .h1{
@@ -48,18 +48,26 @@ body {
     font-weight: 600;
     font-family: 'Lobster', cursive;
     letter-spacing: .2rem;;
+    margin-left: 1rem;
   }
   & .logo {
-    width: 180px;
-    height: 140px;
+    width: 100px;
+    height: 60px;
   }
   & .header-btn{
-    padding:.2rem .8rem ;
+    padding:.4rem 1rem;
     border-radius: $radius;
     background-color: $complementary;
+    font-size: .8rem;
+    margin-right: 1rem;
+    border:none;
+    &:hover{
+      transform: scale(1.1);
+  }
   }
   & .header-a{
     text-decoration: none;
+    color:black;
   }
 }
 
@@ -87,6 +95,8 @@ body {
     & .inputs{
       display: flex;
       flex-direction: column;
+      justify-content: center;
+      align-items: center;
       gap: .1rem;
       border-radius: $radius;
       &   input:focus{
@@ -99,6 +109,11 @@ body {
         }
         & .label{
           font-weight: bold;
+        }
+        & #tipo-siembra.select{
+          border-radius: $radius;
+          box-shadow: $shadow;
+          width:90%;
         }
     }
     & div.select-container {
@@ -117,15 +132,18 @@ body {
 
   
   .btn{
-    margin-top:2rem;
-    padding:.4rem 2rem;
-    border-radius: 14px;
+    margin-top:1rem;
+    margin-bottom: 1rem;
+    padding:.4rem 1rem ;
+    font-size: .8rem;
+    width: 90%;
+    border-radius: $radius;
     border: none;
-    background-color: $primary;
-    color: white;
+    background-color: $complementary;
+    color: black;
     cursor: pointer;
     &:hover{
-      transform: scale(1.2);
+      transform: scale(1.1);
   }
 }
 .caja-tareas {

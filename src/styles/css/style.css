@@ -80,7 +80,7 @@ font-family: 'Poppins', sans-serif;
 */
 /* Animation */
 body {
-  background: url(../../../house-163526.webp) center/cover;
+  background: url(../../../bg.webp) center/cover;
   height: 100vh;
   font-family: "Poppins", sans-serif;
 }
@@ -91,10 +91,11 @@ body {
 
 .header {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
   background-color: rgba(118, 184, 82, 0.4980392157);
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+  padding: 0.9rem;
   width: 100%;
 }
 .header .h1 {
@@ -102,18 +103,26 @@ body {
   font-weight: 600;
   font-family: "Lobster", cursive;
   letter-spacing: 0.2rem;
+  margin-left: 1rem;
 }
 .header .logo {
-  width: 180px;
-  height: 140px;
+  width: 100px;
+  height: 60px;
 }
 .header .header-btn {
-  padding: 0.2rem 0.8rem;
-  border-radius: 0.3rem;
+  padding: 0.4rem 1rem;
+  border-radius: 0.6rem;
   background-color: #51B894;
+  font-size: 0.8rem;
+  margin-right: 1rem;
+  border: none;
+}
+.header .header-btn:hover {
+  transform: scale(1.1);
 }
 .header .header-a {
   text-decoration: none;
+  color: black;
 }
 
 .container {
@@ -133,7 +142,7 @@ body {
   background-color: rgba(118, 184, 82, 0.4980392157);
   text-align: center;
   padding: 0.3rem 1.5rem;
-  border-radius: 0.3rem;
+  border-radius: 0.6rem;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -143,19 +152,26 @@ body {
 .form-principal .inputs {
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
   gap: 0.1rem;
-  border-radius: 0.3rem;
+  border-radius: 0.6rem;
 }
 .form-principal .inputs input:focus {
   color: primary;
 }
 .form-principal .inputs .input {
-  border-radius: 0.3rem;
+  border-radius: 0.6rem;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
   width: 90%;
 }
 .form-principal .inputs .label {
   font-weight: bold;
+}
+.form-principal .inputs #tipo-siembra.select {
+  border-radius: 0.6rem;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+  width: 90%;
 }
 .form-principal div.select-container {
   display: flex;
@@ -166,27 +182,30 @@ body {
   margin-top: 1rem;
 }
 .form-principal div.select-container #tipo-siembra {
-  border-radius: 0.3rem;
+  border-radius: 0.6rem;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
 }
 
 .btn {
-  margin-top: 2rem;
-  padding: 0.4rem 2rem;
-  border-radius: 14px;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  padding: 0.4rem 1rem;
+  font-size: 0.8rem;
+  width: 90%;
+  border-radius: 0.6rem;
   border: none;
-  background-color: #8dc26f;
-  color: white;
+  background-color: #51B894;
+  color: black;
   cursor: pointer;
 }
 .btn:hover {
-  transform: scale(1.2);
+  transform: scale(1.1);
 }
 
 .caja-tareas {
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
   text-align: center;
-  border-radius: 0.3rem;
+  border-radius: 0.6rem;
   width: 80%;
   padding: 2rem;
   background-color: rgba(118, 184, 82, 0.4980392157);

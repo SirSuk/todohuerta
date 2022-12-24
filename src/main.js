@@ -4,6 +4,7 @@ const form = document.querySelector(".form-principal");
 const cajaTareas = document.querySelector(".caja-tareas")
 console.log(form)
 console.log(cajaTareas)
+form.onsubmit()
 
 
 
