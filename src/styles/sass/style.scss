@@ -1,62 +1,96 @@
 @use 'reset';
 @use 'variables' as *;
 @use 'mixins' as mixin ;
-@import '../../../node_modules/bootstrap-icons/font/bootstrap-icons.css';
+
+/* Animation */
+
+// body {
+//   animation: move-forever 25s cubic-bezier(.55,.5,.45,.5)     infinite;
+// }
+
+// @keyframes move-forever {
+//   0% {
+//    transform: translate3d(-90px,0,0);
+//   }
+//   100% { 
+//     transform: translate3d(85px,0,0);
+//   }
+// }
 
 body {
-  background-color:$primary;
+  background:url(../../../house-163526.webp) center/cover;
   height: 100vh;
   font-family: 'Poppins', sans-serif;
 }
+.header{
+  display:flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: $secondary;
+  
+  width: 100%;
+
+  & .h1{
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    font-weight: 600;
+  }
+  & .logo {
+    width: 100px;
+    aspect-ratio: 1;
+  }
+  & .header-btn{
+    padding:.2rem .8rem ;
+    border-radius: $radius;
+    background-color: $complementary;
+  }
+  & .header-a{
+    text-decoration: none;
+  }
+}
+
+
 
 .container{
  width: 80%;
  max-width: 800px;
  margin: 2rem auto;
  @include mixin.centrar;
- flex-direction: column;
+ @include mixin.column;
  gap: 1rem;
 }
-.logo{
-width: 120px;
-}
-h1{
-  font-size: 1.5rem;
-  text-transform: uppercase;
-  font-weight: 600;
-}
+
+
 .main-form{
-text-align: center;
-& div.select-container {
-  @include mixin.borde;
-  border-radius: $radius;
- padding: 3rem;
- margin-top: 2rem;
- @include mixin.column;
-}
-}
-.inputs{
-display: flex;
-flex-direction: column;
-gap: .3rem;
-@include mixin.borde;
-border-radius: $radius;
- & input:focus{
-  color: green;
-
- }
-
+    background-color: $secondary;
+    text-align: center;
+    padding: 2  rem;  
+    & .inputs{
+      display: flex;
+      flex-direction: column;
+      gap: .3rem;
+      border-radius: $radius;
+      & input:focus{
+        color: primary;
+      }
+    }
+    & div.select-container {
+      //@include mixin.borde;
+      //border-radius: $radius;
+      @include mixin.column;
+      @include mixin.centrar;
+      margin-top:1rem; 
+    }
+  }
   
-}
-
-.btn {
-  margin-top:2rem;
-  padding:.4rem 2rem;
-  border-radius: 14px;
-  border: none;
-  background-color: $complementary;
-  color: white;
-  cursor: pointer;
+  .btn{
+    margin-top:2rem;
+    padding:.4rem 2rem;
+    border-radius: 14px;
+    border: none;
+    background-color: $primary;
+    color: white;
+    cursor: pointer;
     &:hover{
       transform: scale(1.1);
   }
