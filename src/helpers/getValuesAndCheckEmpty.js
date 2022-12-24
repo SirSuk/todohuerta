@@ -3,11 +3,11 @@ const getValueAndCheckEmpty = (input) => {
   const value = input.value
 
   if (value.trim() === '') {
-    input.classList.add('is-invalid')    
+    input.classList.add('vacio')    
     return 'está vacío'
 
   } else {
-    input.classList.remove('is-invalid') 
+    input.classList.remove('vacio') 
     return value
   }
 

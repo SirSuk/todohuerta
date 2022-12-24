@@ -4,22 +4,22 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="./src/styles/css/style.css">
-
-  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Anton&family=Poppins:wght@200;400;700;900&display=swap" rel="stylesheet">
-  <title>Lista de tareas del hortelano</title>
+  <!-- Fonts-->
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Lobster&family=Poppins:wght@200;400;700;900&display=swap" rel="stylesheet">
+  <title>Mi lista de siembra</title>
 </head>
 <body>
   <header class="header">
     <img class="logo"src="daw.png" alt="">
-    <h1 class="h1">Lista de tareas del hortelano</h1>
+    <h1 class="h1">Mi lista de siembra</h1>
     <button class="header-btn">
       <a href="" class="header-a">Contactame</a>
     </button>
   </header>
   <div class="container">
-    <h1></h1>
+    <h1 class="h1 dnone">Mi lista de siembra</h1>
 
-    <form class="main-form">
+    <form class="form-principal">
       <div class="inputs">
         <label class="label" 
                  for="fecha">Que vas a sembrar?</label>
@@ -42,13 +42,14 @@
          <option  name="semillero" value="siembra-directa">Siembra directa</option>  
         </select>
       </div> 
-        
-      <button class="btn">Añadir</button>
+      <div class="caja-boton">
+        <button class="btn">Añadir</button>
+      </div>
       
     </form>
 
 
-    <section class="container-siembras">
+    <section class="caja-tareas">
       <h2>Siembra</h2>
 
       <article class="siembra">
