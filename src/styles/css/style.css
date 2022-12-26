@@ -78,17 +78,27 @@ font-family: 'Lobster', cursive;
 font-family: 'Poppins', sans-serif;
 
 */
-/* Animation */
 body {
   background: url(../../../bg.webp) center/cover;
   height: 100vh;
   font-family: "Poppins", sans-serif;
 }
 
+/**************/
+/*** ESTILOS GENERALES ***/
+/**************/
 .dnone {
   display: none;
 }
 
+.vacio {
+  outline: 2px solid rgb(255, 0, 132) !important;
+  outline-offset: 2px;
+}
+
+/**************/
+/*** HEADER ***/
+/**************/
 .header {
   display: flex;
   justify-content: space-between;
@@ -106,8 +116,8 @@ body {
   margin-left: 1rem;
 }
 .header .logo {
-  width: 100px;
-  height: 60px;
+  width: 150px;
+  height: 90px;
 }
 .header .header-btn {
   padding: 0.4rem 1rem;
@@ -125,6 +135,9 @@ body {
   color: black;
 }
 
+/**************/
+/*** CONTAINER ***/
+/**************/
 .container {
   width: 80%;
   max-width: 800px;
@@ -137,6 +150,9 @@ body {
   gap: 0.7rem;
 }
 
+/**************/
+/*** FORM***/
+/**************/
 .form-principal {
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
   background-color: rgba(118, 184, 82, 0.4980392157);
@@ -157,21 +173,26 @@ body {
   gap: 0.1rem;
   border-radius: 0.6rem;
 }
-.form-principal .inputs input:focus {
-  color: primary;
-}
-.form-principal .inputs .input {
+.form-principal .inputs input[type=text],
+.form-principal .inputs input[type=date] {
   border-radius: 0.6rem;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
   width: 90%;
+}
+.form-principal .inputs input[type=text]:focus,
+.form-principal .inputs input[type=date]:focus {
+  background-color: rgba(118, 184, 82, 0.4980392157);
 }
 .form-principal .inputs .label {
   font-weight: bold;
 }
-.form-principal .inputs #tipo-siembra.select {
+.form-principal .inputs select {
   border-radius: 0.6rem;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
   width: 90%;
+}
+.form-principal .inputs select:focus {
+  background-color: rgba(118, 184, 82, 0.4980392157);
 }
 .form-principal div.select-container {
   display: flex;
@@ -186,6 +207,9 @@ body {
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
 }
 
+/**************/
+/*** BTN ***/
+/**************/
 .btn {
   margin-top: 1rem;
   margin-bottom: 1rem;
@@ -202,26 +226,51 @@ body {
   transform: scale(1.1);
 }
 
+/**************/
+/*** CAJA TAREAS ***/
+/**************/
 .caja-tareas {
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
   text-align: center;
   border-radius: 0.6rem;
-  width: 80%;
-  padding: 2rem;
+  width: 100%;
+  padding: 1rem;
+  margin: 0;
   background-color: rgba(118, 184, 82, 0.4980392157);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
 }
-.caja-tareas.siembra {
-  display: flex;
-  gap: 2rem;
-  justify-content: space-between;
-}
-.caja-tareash2 {
+.caja-tareas .caja-tareas-h2 {
   text-align: center;
+  margin-bottom: 1rem;
+}
+.caja-tareas article.siembra {
+  font-size: 1.2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+.caja-tareas article.siembra.delete-icon {
+  cursor: pointer;
+  color: red;
+}
+.caja-tareas article.siembra span {
+  text-align: center;
+  width: 100%;
+  text-transform: capitalize;
 }
 
+/**************/
+/*** MEDIAQUERYS  ***/
+/**************/
 @media (max-width: 690px) {
   .h1 {
     display: none;
+  }
+  .caja-tareas span {
+    display: flex;
+    flex-direction: column;
+    font-size: 0.8rem;
+    font-weight: bold;
   }
 }
 

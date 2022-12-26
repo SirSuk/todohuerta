@@ -10,30 +10,33 @@ font-family: 'Poppins', sans-serif;
 */
 
 
-/* Animation */
-
-// body {
-//   animation: move-forever 25s cubic-bezier(.55,.5,.45,.5)     infinite;
-// }
-
-// @keyframes move-forever {
-//   0% {
-//    transform: translate3d(-90px,0,0);
-//   }
-//   100% { 
-//     transform: translate3d(85px,0,0);
-//   }
-// }
-
 body {
   background:url(../../../bg.webp) center/cover;
   height: 100vh;
   font-family: 'Poppins', sans-serif;
 }
 
+
+
+
+/**************/
+/*** ESTILOS GENERALES ***/
+/**************/
+
 .dnone{
   display:none;
 }
+.vacio{
+  outline: 2px solid rgb(255, 0, 132) !important;
+  outline-offset: 2px;
+   }
+
+
+
+/**************/
+/*** HEADER ***/
+/**************/
+
 .header{
   display:flex;
   justify-content: space-between;
@@ -47,12 +50,12 @@ body {
     font-size: 2  rem;
     font-weight: 600;
     font-family: 'Lobster', cursive;
-    letter-spacing: .2rem;;
+    letter-spacing: .2rem;
     margin-left: 1rem;
   }
   & .logo {
-    width: 100px;
-    height: 60px;
+    width: 150px;
+    height: 90px;
   }
   & .header-btn{
     padding:.4rem 1rem;
@@ -73,6 +76,10 @@ body {
 
 
 
+/**************/
+/*** CONTAINER ***/
+/**************/
+
 .container{
  width: 80%;
  max-width: 800px;
@@ -83,6 +90,10 @@ body {
 }
 
 
+/**************/
+/*** FORM***/
+/**************/
+
 .form-principal{
   box-shadow: $shadow;
   background-color: $secondary;
@@ -92,28 +103,34 @@ body {
   @include mixin.centrar;
   @include mixin.column;
 
-    & .inputs{
+    .inputs{
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
       gap: .1rem;
       border-radius: $radius;
-      &   input:focus{
-        color: primary;
-      }
-      .input{
+      
+      input[type="text"] ,
+      input[type="date"] {
         border-radius: $radius;
         box-shadow: $shadow;
         width:90%;
+        
+        &:focus {
+          background-color: $secondary;
         }
-        & .label{
+        }
+        .label{
           font-weight: bold;
         }
-        & #tipo-siembra.select{
+        select {
           border-radius: $radius;
           box-shadow: $shadow;
           width:90%;
+          &:focus {
+            background-color: $secondary;
+          }
         }
     }
     & div.select-container {
@@ -130,7 +147,10 @@ body {
   }
   
 
-  
+/**************/
+/*** BTN ***/
+/**************/
+
   .btn{
     margin-top:1rem;
     margin-bottom: 1rem;
@@ -146,26 +166,63 @@ body {
       transform: scale(1.1);
   }
 }
+
+/**************/
+/*** CAJA TAREAS ***/
+/**************/
+
+
 .caja-tareas {
-  box-shadow: $shadow;
+  
   text-align: center;
   border-radius: $radius;
-  width: 80%;
-  padding: 2rem;
+  width: 100%;
+  padding: 1rem;
+  margin:0;
   background-color: $secondary;
-  &.siembra{
-    display: flex;
-    gap:2rem;
-    justify-content: space-between;
-  }
-  &h2{
-    text-align:center;
-  }
-}
+  box-shadow: $shadow;
+  
+    & .caja-tareas-h2{
+      text-align:center;
+      margin-bottom: 1rem;
+    }
+
+    & article.siembra{
+      font-size: 1.2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: .5rem;
+
+      &.delete-icon {
+        cursor: pointer;
+        color: red;
+      }
+
+      & span {
+        text-align: center;
+        width: 100%;
+        text-transform: capitalize;
+        
+        }
+      }
+    }
+
+
+/**************/
+/*** MEDIAQUERYS  ***/
+/**************/
+
 
 @media(max-width:690px) {
   .h1 {
     display:none;
+  }
+  .caja-tareas span {
+    display:flex;
+    flex-direction: column;
+    font-size: .8rem;
+    font-weight: bold;
   }
 }
 
@@ -210,10 +267,7 @@ body {
       
 //     }
     
-//     .vacio{
-//       outline: 2px solid crimson !important;
-//       outline-offset: 2px;
-//     }
+   
 //   }
 
 //   div.checkbox {
@@ -263,11 +317,7 @@ body {
 //       font-size: 1.1rem;
 //     }
 
-//     .eye-icon {
-//       color: #f2ff03;
-//       margin-right: auto;
-//       margin-left: 1rem;
-//     }
+//     .
 
 //     .delete-icon {
 //       cursor: pointer;

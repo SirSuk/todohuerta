@@ -1,10 +1,60 @@
+
 import { getValueAndCheckEmpty } from './helpers/getValuesAndCheckEmpty.js'
 
+
 const form = document.querySelector(".form-principal");
-const cajaTareas = document.querySelector(".caja-tareas")
-console.log(form)
+const cajaTareas = document.querySelector(".caja-tareas");
+
+
+
+/*añadir siembra */
+
+const addSiembra = (e) => {
+  e.preventDefault();
+  const hortaliza = getValueAndCheckEmpty(form.hortaliza)
+  const fecha = getValueAndCheckEmpty(form.fecha)
+  const tipoSiembra = getValueAndCheckEmpty(form.tipoSiembra)
+  console.log(hortaliza, fecha, tipoSiembra)
+
+
+if (hortaliza === 'está vacío' || fecha === 'está vacío'|| tipoSiembra === 'está vacío') {
+  return
+}
+
+const nuevaSiembra = document.createElement('article');
+  nuevaSiembra.classList.add("siembra")
+  console.log(nuevaSiembra)
+  
+nuevaSiembra.innerHTML = `
+        <span class="texto">${hortaliza}</span> 
+        <span class="fecha"> ${fecha}</span>
+        <span class="sowing-type"> ${tipoSiembra} </span>
+        <i class="icon delete-icon bi bi-trash"></i>
+`
+cajaTareas.appendChild(nuevaSiembra)
+
 console.log(cajaTareas)
-form.onsubmit()
+}
+
+
+/*borrar siembra */
+
+const deleteSiembra = (e) => {
+ 
+  if (e.target.classList.contains('icon')) {
+    console.log(e.target.parentElement)
+    const youSure = confirm('¿Estás segur@?')
+    if (youSure) {
+       e.target.parentElement.remove() 
+    }  
+  }
+
+}
+
+
+
+form.onsubmit =(e) => addSiembra(e);
+cajaTareas.addEventListener("click", (e) => deleteSiembra(e));
 
 
 
@@ -115,4 +165,3 @@ form.onsubmit()
 
 //   }
 
-// }

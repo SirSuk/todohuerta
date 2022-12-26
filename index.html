@@ -9,6 +9,7 @@
   <title>Mi lista de siembra</title>
 </head>
 <body>
+   <!--Header-->
   <header class="header">
     <img class="logo"src="newlogo.png" alt="">
     <h1 class="h1">Mi lista de siembra</h1>
@@ -19,45 +20,37 @@
   <div class="container">
     <h1 class="h1 dnone">Mi lista de siembra</h1>
 
+
+    <!--Formulario-->
     <form class="form-principal">
       <div class="inputs">
-        <label class="label" 
-                 for="fecha">Que vas a sembrar?</label>
-        <input  class="input" 
-                type="text"
-                name="hortaliza">
-        <label class="label" 
-                for="fecha">Fecha de siembra</label>
-        <input class="input" 
-               id="fecha" 
-               type="date" 
-               name="fecha">
-      
-          <label class="label" 
-                 for="tipo-siembra">Tipo de siembra </label>
-                <select class= "select" id="tipo-siembra" name="tipo-siembra">
-                  <option value="">Tipo de siembra</option>  
-                  <option  name="semillero" value="semillero">Semillero</option>
-                  <option  name="semillero" value="siembra-directa">Siembra directa</option>  
-                 </select>
+        <label class="label">Verdura a sembrar <input  class="input" type="text"name="hortaliza"> </label>
+        
+        <label class="label" >Fecha de siembra <input class="input" id="fecha" type="date" name="fecha" placeholder="fecha de la siembra"></label>
+        
+        <label class="label" for="tipo-siembra">Tipo de siembra 
+          <select class= "select" id="tipo-siembra" name="tipoSiembra">
+            <option value="">Tipo de siembra</option>  
+            <option  name="semillero" value="semillero">Semillero</option>
+            <option  name="siembraDirecta" value="siembra-directa">Siembra directa</option>  
+           </select>
+        </label>           
       </div>
-      
         <button class="btn">Añadir</button>
-    
-    
     </form>
 
-
+ <!--Caja tareas-->
     <section class="caja-tareas">
-      <h2>Siembra</h2>
+      <h2 class="caja-tareas-h2">Siembra</h2>
 
       <article class="siembra">
-        <span class="texto">Semillero tomates</span> - <span class="fecha"></span><i class="icon eye-icon bi bi-eye"></i><i class="icon delete-icon bi bi-trash"></i>
+        <span class="texto">Semillero tomates</span> 
+        <span class="fecha"> 10/02/2022 </span>
+        <span class="sowing-type"> semillero </span>
+        <i class="icon delete-icon bi bi-trash"></i>
       </article>
 
-
-
-
+    </section>
   </div>
   
   
