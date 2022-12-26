@@ -5,7 +5,17 @@ import { getValueAndCheckEmpty } from './helpers/getValuesAndCheckEmpty.js'
 
 const form = document.querySelector(".form-principal");
 const cajaTareas = document.querySelector(".caja-tareas");
+const moonIcon = document.querySelector(".darkmode-icon");
 
+
+const cambioModo = (e) => {
+  e.target.classList.add("cambio-modo");
+}
+
+
+
+/* Handle darkmode*/
+moonIcon.addEventListener("click", cambioModo);
 
 
 /*añadir siembra */
