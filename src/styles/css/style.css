@@ -79,9 +79,10 @@ font-family: 'Poppins', sans-serif;
 
 */
 body {
-  background: url(../../../bg.webp) center/cover;
+  background: url(../../assets/imgs/bg.webp) center/cover;
   height: 100vh;
   font-family: "Poppins", sans-serif;
+  font-size: 1rem;
 }
 
 /**************/
@@ -94,6 +95,15 @@ body {
 .vacio {
   outline: 2px solid rgb(255, 0, 132) !important;
   outline-offset: 2px;
+}
+
+button {
+  padding: 0.4rem 1rem;
+  border-radius: 0.6rem;
+  background-color: #51B894;
+  font-size: 0.8rem;
+  border: none;
+  cursor: pointer;
 }
 
 /**************/
@@ -110,25 +120,20 @@ body {
 }
 .header .h1 {
   font-size: 2 rem;
-  font-weight: 600;
+  font-weight: 200;
   font-family: "Lobster", cursive;
   letter-spacing: 0.2rem;
   margin-left: 1rem;
 }
 .header .logo {
-  width: 150px;
-  height: 90px;
+  width: 120px;
+  height: 70px;
 }
 .header .header-btn {
-  padding: 0.4rem 1rem;
-  border-radius: 0.6rem;
-  background-color: #51B894;
-  font-size: 0.8rem;
   margin-right: 1rem;
-  border: none;
 }
 .header .header-btn:hover {
-  transform: scale(1.1);
+  background-color: rgba(118, 184, 82, 0.4980392157);
 }
 .header .header-a {
   text-decoration: none;
@@ -164,66 +169,44 @@ body {
   align-items: center;
   display: flex;
   flex-direction: column;
+  /**************/
+  /*** BTN ***/
+  /*************/
 }
 .form-principal .inputs {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 0.1rem;
+  gap: 0.6rem;
   border-radius: 0.6rem;
-}
-.form-principal .inputs input[type=text],
-.form-principal .inputs input[type=date] {
-  border-radius: 0.6rem;
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
-  width: 90%;
-}
-.form-principal .inputs input[type=text]:focus,
-.form-principal .inputs input[type=date]:focus {
-  background-color: rgba(118, 184, 82, 0.4980392157);
 }
 .form-principal .inputs .label {
-  font-weight: bold;
+  width: 90%;
 }
-.form-principal .inputs select {
+.form-principal .inputs input[type=text],
+.form-principal .inputs input[type=date],
+.form-principal .inputs .select {
   border-radius: 0.6rem;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
   width: 90%;
+  height: 30px;
+  font-size: 0.8rem;
+}
+.form-principal .inputs input[type=text]:focus,
+.form-principal .inputs input[type=date]:focus,
+.form-principal .inputs .select:focus {
+  background-color: rgba(118, 184, 82, 0.4980392157);
 }
 .form-principal .inputs select:focus {
   background-color: rgba(118, 184, 82, 0.4980392157);
 }
-.form-principal div.select-container {
-  display: flex;
-  flex-direction: column;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-top: 1rem;
-}
-.form-principal div.select-container #tipo-siembra {
-  border-radius: 0.6rem;
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
-}
-
-/**************/
-/*** BTN ***/
-/**************/
-.btn {
+.form-principal .btn {
   margin-top: 1rem;
   margin-bottom: 1rem;
-  padding: 0.4rem 1rem;
-  font-size: 0.8rem;
-  width: 90%;
-  border-radius: 0.6rem;
-  border: none;
-  background-color: #51B894;
-  color: black;
-  cursor: pointer;
 }
-.btn:hover {
-  transform: scale(1.1);
+.form-principal .btn:hover {
+  background-color: rgba(118, 184, 82, 0.4980392157);
 }
 
 /**************/
@@ -235,6 +218,7 @@ body {
   width: 100%;
   padding: 1rem;
   margin: 0;
+  height: 40vh;
   background-color: rgba(118, 184, 82, 0.4980392157);
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
 }
@@ -270,7 +254,6 @@ body {
     display: flex;
     flex-direction: column;
     font-size: 0.8rem;
-    font-weight: bold;
   }
 }
 

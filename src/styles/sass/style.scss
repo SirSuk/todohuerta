@@ -11,12 +11,11 @@ font-family: 'Poppins', sans-serif;
 
 
 body {
-  background:url(../../../bg.webp) center/cover;
+  background:url(../../assets/imgs/bg.webp) center/cover;
   height: 100vh;
   font-family: 'Poppins', sans-serif;
+  font-size: 1rem;
 }
-
-
 
 
 /**************/
@@ -31,6 +30,14 @@ body {
   outline-offset: 2px;
    }
 
+button {
+  padding:.4rem 1rem;
+  border-radius: $radius;
+  background-color: $complementary;
+  font-size: .8rem;
+  border:none;
+  cursor:pointer;
+   }
 
 
 /**************/
@@ -48,24 +55,21 @@ body {
 
   & .h1{
     font-size: 2  rem;
-    font-weight: 600;
+    font-weight: 200;
     font-family: 'Lobster', cursive;
     letter-spacing: .2rem;
     margin-left: 1rem;
   }
   & .logo {
-    width: 150px;
-    height: 90px;
+    width: 120px;
+    height: 70px;
   }
   & .header-btn{
-    padding:.4rem 1rem;
-    border-radius: $radius;
-    background-color: $complementary;
-    font-size: .8rem;
     margin-right: 1rem;
-    border:none;
+    
+
     &:hover{
-      transform: scale(1.1);
+      background-color: $secondary;
   }
   }
   & .header-a{
@@ -73,7 +77,6 @@ body {
     color:black;
   }
 }
-
 
 
 /**************/
@@ -108,63 +111,48 @@ body {
       flex-direction: column;
       justify-content: center;
       align-items: center;
-      gap: .1rem;
+      gap: .6rem;
       border-radius: $radius;
       
+      .label{
+          width:90%;
+      }
+     
       input[type="text"] ,
-      input[type="date"] {
+      input[type="date"],
+      .select {
         border-radius: $radius;
         box-shadow: $shadow;
         width:90%;
+        height: 30px;
+        font-size: .8rem;
         
         &:focus {
           background-color: $secondary;
         }
         }
-        .label{
-          font-weight: bold;
-        }
         select {
-          border-radius: $radius;
-          box-shadow: $shadow;
-          width:90%;
+         
           &:focus {
             background-color: $secondary;
           }
         }
-    }
-    & div.select-container {
-      //@include mixin.borde;
-      //border-radius: $radius;
-      @include mixin.column;
-      @include mixin.centrar;
-      margin-top:1rem; 
-      & #tipo-siembra{
-        border-radius:$radius;
-        box-shadow: $shadow;
-      }
-    }
+    
   }
-  
-
+    
 /**************/
 /*** BTN ***/
-/**************/
+/*************/
 
-  .btn{
-    margin-top:1rem;
-    margin-bottom: 1rem;
-    padding:.4rem 1rem ;
-    font-size: .8rem;
-    width: 90%;
-    border-radius: $radius;
-    border: none;
-    background-color: $complementary;
-    color: black;
-    cursor: pointer;
-    &:hover{
-      transform: scale(1.1);
-  }
+& .btn{
+  margin-top:1rem;
+  margin-bottom: 1rem;
+
+  &:hover{
+    background-color: $secondary;
+}
+}
+
 }
 
 /**************/
@@ -173,12 +161,12 @@ body {
 
 
 .caja-tareas {
-  
   text-align: center;
   border-radius: $radius;
   width: 100%;
   padding: 1rem;
   margin:0;
+  height: 40vh;
   background-color: $secondary;
   box-shadow: $shadow;
   
@@ -222,7 +210,7 @@ body {
     display:flex;
     flex-direction: column;
     font-size: .8rem;
-    font-weight: bold;
+    
   }
 }
 

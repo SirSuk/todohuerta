@@ -1,5 +1,6 @@
 
 import { getValueAndCheckEmpty } from './helpers/getValuesAndCheckEmpty.js'
+// import {dateFormatter} from './helpers/dateFormatter.js'
 
 
 const form = document.querySelector(".form-principal");
@@ -12,7 +13,9 @@ const cajaTareas = document.querySelector(".caja-tareas");
 const addSiembra = (e) => {
   e.preventDefault();
   const hortaliza = getValueAndCheckEmpty(form.hortaliza)
-  const fecha = getValueAndCheckEmpty(form.fecha)
+  let fecha = getValueAndCheckEmpty(form.fecha);
+  fecha = fecha.split("-").reverse().join("-");
+  console.log(fecha)
   const tipoSiembra = getValueAndCheckEmpty(form.tipoSiembra)
   console.log(hortaliza, fecha, tipoSiembra)
 
@@ -29,11 +32,10 @@ nuevaSiembra.innerHTML = `
         <span class="texto">${hortaliza}</span> 
         <span class="fecha"> ${fecha}</span>
         <span class="sowing-type"> ${tipoSiembra} </span>
-        <i class="icon delete-icon bi bi-trash"></i>
+        <i class="delete-icon bi bi-trash"></i>
 `
 cajaTareas.appendChild(nuevaSiembra)
-
-console.log(cajaTareas)
+form.reset();
 }
 
 
@@ -41,7 +43,7 @@ console.log(cajaTareas)
 
 const deleteSiembra = (e) => {
  
-  if (e.target.classList.contains('icon')) {
+  if (e.target.classList.contains('delete-icon')) {
     console.log(e.target.parentElement)
     const youSure = confirm('¿Estás segur@?')
     if (youSure) {
