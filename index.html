@@ -5,31 +5,32 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="./src/styles/css/style.css">
   <!-- Fonts-->
-  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Lobster&family=Poppins:wght@200;400;700;900&display=swap" rel="stylesheet">
-  <title>Mi lista de siembra</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Staatliches&display=swap" rel="stylesheet">  <title>Mi lista de siembra</title>
 </head>
 <body>
    <!--Header-->
   <header class="header">
-    <img class="logo"src="./src/assets/imgs/newlogo.png" alt="">
+    <img class="logo"
+         src="./src/assets/imgs/logo.png" alt="logo agricultor">
     <h1 class="h1">Mi lista de siembra</h1>
-    <img src="./src/assets/imgs/icons8-moon-symbol-64.png" alt="darkmode-icon" class="darkmode-icon">
+    <img class="darkmode-icon"
+         src="./src/assets/imgs/icons8-moon-symbol-64.png" 
+         alt="darkmode-icon" >
+         
     <button class="header-btn">
-      <a href="" class="header-a">Contact</a>
+      <a  target="_blank" href="http://www.radifelnoun.com" class="header-a">Play a game</a>
     </button>
   </header>
-  <div class="agricultor">
-    <img class="agricultor-img" src="./src/assets/imgs/agricultor-removebg-preview.png" alt="imagen agricultor">
-  </div>
+ 
   <div class="container">
     <h1 class="h1 dnone">Mi lista de siembra</h1>
 
 
     <!--Formulario-->
     <form class="form-principal">
-    
+      
       <div class="inputs">
-        <label class="label">Verdura a sembrar <input  class="input" type="text"name="hortaliza"> </label>
+        <label autofocus class="label">Verdura a sembrar <input autofocus class="input" type="text"name="hortaliza"> </label>
         
         <label class="label" >Fecha de siembra <input class="input" id="fecha" type="date" name="fecha" placeholder="fecha de la siembra"></label>
         
@@ -43,22 +44,27 @@
       </div>
         <button class="btn">Añadir</button>
     </form>
-     
-    </div>
-  
- <!--Caja tareas-->
     <section class="caja-tareas">
       <h2 class="caja-tareas-h2">Hortalizas sembradas</h2>
-
-      <!-- <article class="siembra">
-        <span class="texto">Semillero tomates</span> 
-        <span class="fecha"> 10/02/2022 </span>
-        <span class="sowing-type"> semillero </span>
-        <i class="icon delete-icon bi bi-trash"></i>
-      </article> -->
-
-    </section>
+      
+      
+        <!-- <article class="siembra">
+          <span class="texto">Semillero tomates</span> 
+          <span class="fecha"> 10/02/2022 </span>
+          <span class="sowing-type"> semillero </span>
+          <i class="icon delete-icon bi bi-trash"></i>
+        </article>
+        
+   -->
+      </section>
   </div>
+  
+ 
+  <!--Caja tareas-->
+
+  
+
+  
 
   
   <script src="./src/main.js" type="module"></script>

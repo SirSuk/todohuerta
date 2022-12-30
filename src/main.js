@@ -1,5 +1,6 @@
 
 import { getValueAndCheckEmpty } from './helpers/getValuesAndCheckEmpty.js'
+//import { handleDarkMode } from './helpers/handleDarkMode.js'
 // import {dateFormatter} from './helpers/dateFormatter.js'
 
 
@@ -7,9 +8,16 @@ const form = document.querySelector(".form-principal");
 const cajaTareas = document.querySelector(".caja-tareas");
 const moonIcon = document.querySelector(".darkmode-icon");
 
+let interruptorNoche = false;
 
 const cambioModo = (e) => {
-  e.target.classList.add("cambio-modo");
+  if(interruptorNoche == false) {
+    document.body.classList.toggle("darkmode");
+  if(moonIcon.classList.contains("darkmode")) {
+   console.log("lo tiene")
+ }
+ 
+}
 }
 
 
@@ -24,7 +32,7 @@ const addSiembra = (e) => {
   e.preventDefault();
   const hortaliza = getValueAndCheckEmpty(form.hortaliza)
   let fecha = getValueAndCheckEmpty(form.fecha);
-  fecha = fecha.split("-").reverse().join("-");
+  fecha = fecha.split("-").reverse().join("-"); /* arreglamos formato fecha */
   console.log(fecha)
   const tipoSiembra = getValueAndCheckEmpty(form.tipoSiembra)
   console.log(hortaliza, fecha, tipoSiembra)
@@ -46,6 +54,8 @@ nuevaSiembra.innerHTML = `
 `
 cajaTareas.appendChild(nuevaSiembra)
 form.reset();
+
+
 }
 
 
