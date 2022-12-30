@@ -1,28 +1,37 @@
+//* imports */
 
 import { getValueAndCheckEmpty } from './helpers/getValuesAndCheckEmpty.js'
-//import { handleDarkMode } from './helpers/handleDarkMode.js'
-// import {dateFormatter} from './helpers/dateFormatter.js'
 
+
+//* seleccionando del DOM *//
 
 const form = document.querySelector(".form-principal");
 const cajaTareas = document.querySelector(".caja-tareas");
 const moonIcon = document.querySelector(".darkmode-icon");
 
-let interruptorNoche = false;
 
-const cambioModo = (e) => {
-  if(interruptorNoche == false) {
-    document.body.classList.toggle("darkmode");
-  if(moonIcon.classList.contains("darkmode")) {
-   console.log("lo tiene")
- }
- 
-}
+
+//* cambio de modo noche / dia */
+
+let isDarkMode = false
+
+const cambioModo= (e) => {
+  document.body.classList.toggle('dark')
+  if (isDarkMode) {
+    // PASAR A LIGHT MODE
+    moonIcon.src = "../src/assets/imgs/icons8-moon-symbol-64.png"   
+  } else {
+    // PASAR A DARK MODE
+    moonIcon.src = "../src/assets/imgs/icons8-sun-star-48.png"    
+  }
+  isDarkMode = !isDarkMode
+  
 }
 
 
 
 /* Handle darkmode*/
+
 moonIcon.addEventListener("click", cambioModo);
 
 
