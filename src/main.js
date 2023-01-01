@@ -42,12 +42,16 @@ const addSiembra = (e) => {
   const hortaliza = getValueAndCheckEmpty(form.hortaliza)
   let fecha = getValueAndCheckEmpty(form.fecha);
   fecha = fecha.split("-").reverse().join("-"); /* arreglamos formato fecha */
-  console.log(fecha)
+  console.log(form.plazoCosecha)
+  const plazoCosecha = getValueAndCheckEmpty(form.plazoCosecha)
   const tipoSiembra = getValueAndCheckEmpty(form.tipoSiembra)
-  console.log(hortaliza, fecha, tipoSiembra)
+  console.log(plazoCosecha.innerText)
 
 
-if (hortaliza === 'está vacío' || fecha === 'está vacío'|| tipoSiembra === 'está vacío') {
+if (hortaliza === 'está vacío' || 
+    fecha === 'está vacío'|| 
+    tipoSiembra === 'está vacío' || 
+    plazoCosecha === 'está vacío') {
   return
 }
 
@@ -59,6 +63,7 @@ nuevaSiembra.innerHTML = `
         <span class="texto">${hortaliza}</span> 
         <span class="fecha"> ${fecha}</span>
         <span class="sowing-type"> ${tipoSiembra} </span>
+        <span class="cosecha"> Cosecha en ${plazoCosecha}  meses </span>
         <i class="delete-icon bi bi-trash"></i>
 `
 cajaTareas.appendChild(nuevaSiembra)

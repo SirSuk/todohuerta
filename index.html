@@ -30,17 +30,30 @@
     <form class="form-principal">
       
       <div class="inputs">
-        <label autofocus class="label">Verdura a sembrar <input autofocus class="input" type="text"name="hortaliza"> </label>
-        
-        <label class="label" >Fecha de siembra <input class="input" id="fecha" type="date" name="fecha" placeholder="fecha de la siembra"></label>
-        
+        <label autofocus class="label">Verdura a sembrar 
+          <input autofocus class="input" type="text"name="hortaliza"> 
+        </label>
+        <label class="label" >Fecha de siembra 
+          <input class="input" id="fecha" type="date" name="fecha" placeholder="fecha de la siembra">
+        </label>
         <label class="label" for="tipo-siembra">Tipo de siembra 
           <select class= "select" id="tipo-siembra" name="tipoSiembra">
             <option value="">Tipo de siembra</option>  
             <option  name="semillero" value="semillero">Semillero</option>
             <option  name="siembraDirecta" value="siembra-directa">Siembra directa</option>  
            </select>
-        </label>           
+        </label>     
+        <label class="label" for="plazo-cosecha">Meses hasta cosechar
+          <select class= "select" id="plazo-cosecha" name="plazoCosecha">
+            <option value="">Meses hasta cosechar</option>  
+            <option  name="1" value="1">1</option>
+            <option  name="2" value="2">2</option>  
+            <option  name="3" value="3">3</option>  
+            <option  name="4" value="4">4</option>  
+            <option  name="5" value="5">5</option>  
+            
+           </select>
+        </label>                 
       </div>
         <button class="btn">Añadir</button>
     </form>
@@ -48,14 +61,14 @@
       <h2 class="caja-tareas-h2">Hortalizas sembradas</h2>
       
       
-        <!-- <article class="siembra">
-          <span class="texto">Semillero tomates</span> 
-          <span class="fecha"> 10/02/2022 </span>
-          <span class="sowing-type"> semillero </span>
-          <i class="icon delete-icon bi bi-trash"></i>
+        <article class="siembra siembra-title">
+          <span class="texto">🍇Hortaliza sembrada</span> 
+          <span class="fecha"> 📆Fecha de siembra </span>
+          <span class="sowing-type">👨‍🌾Como se sembró </span>
+          <span class="cosecha"> ⌛Meses para cosechar </span>
         </article>
         
-   -->
+
       </section>
   </div>
   

@@ -172,9 +172,9 @@ button {
 .caja-tareas {
   text-align: center;
   border-radius: $radius;
-  width: 90%;
+  width: 96%;
   overflow-y: hidden;
-  padding: 1rem;
+  padding: .5rem;
   margin:0;
   height: 100%;
   background-color: $secondary;
@@ -182,17 +182,17 @@ button {
   position:relative;
  
   
-    & .caja-tareas-h2{
-      font-size: 1.5rem;
+    .caja-tareas-h2{
+      font-size: 1.3rem;
       text-align:center;
       margin-bottom: 1rem;
       text-transform: uppercase;;
     }
 
-    & article.siembra{
-      font-size: 1.2rem;
+     article.siembra{
+      font-size: 1rem;
       display: flex;
-      justify-content: space-between;
+      justify-content: space-around;
       align-items: center;
       margin-bottom: .5rem;
       padding: .5rem;
@@ -204,12 +204,17 @@ button {
         
       }
 
-      & span {
+       span {
         text-align: center;
         width: 100%;
-        text-transform: uppercase;
+        
         }
       }
+      article.siembra-title{
+        font-weight: 600;
+        background-color: $primary;
+      }
+      
      
     }
 
@@ -230,6 +235,9 @@ button {
 }
 
 @media(max-width:650px) {
+  .siembra-title{
+    display: none !important;
+  }
   .caja-tareas {
     height: 100%;
     padding-bottom:2 rem !important;
